@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site Behavior tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic site info-->
+    <meta name="title" data-hid="title" content="99 sailing | ope.cool">
+    <meta name="description" data-hid="description" content="come along as I work towards 99 sailing in Old School Runescape">
+
+    <!-- Open Graph (Facebook/Linkedin) tags -->
+    <!-- Testing tool: https://developers.facebook.com/tools/debug/ -->
+    <meta property="og:site_name" content="99 sailing | ope.cool">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://sailing.ope.cool">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="99 sailing | ope.cool">
+    <meta property="og:description" content="come along as I work towards 99 sailing in Old School Runescape">
+    <meta property="og:image" content="https://oldschool.runescape.wiki/images/Sailing.png">
+
+    <!-- Twitter tags -->
+    <!-- Testing tool: https://cards-dev.twitter.com/validator -->
+    <meta name="twitter:site" content="https://sailing.ope.cool">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="99 sailing | ope.cool">
+    <meta name="twitter:description" content="come along as I work towards 99 sailing in Old School Runescape">
+    <meta name="twitter:image" content="https://oldschool.runescape.wiki/images/Sailing.png">
+    <meta name="twitter:image:alt" content="The sailing skill icon from Old School Runescape">
+    <title>99 sailing | ope.cool</title>
+    
+    <!-- Inline SVG Emoji Icon -->
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA1CAMAAAAjxtjyAAAAolBMVEUAAABydnt2en+FiY+Nkph7gIWDh41wdHl0eH1gY2d4fIF6foR9goeBhYtucndkZ2yIjZOPlJqSl52do6l/hIlpbHCWnKNSVVhrbnOQlZtscHWLkJaGi5BbXmOYnqSaoKaJj5WUmZ+boahmam5VV1tdYWVNUFSgpqyVm6FiZWpKTVFQUlafpKtXWl1GSExaXGE0NTlISk5AQkU6PD9DRUgRERUB6aW7AAAAAXRSTlMAQObYZgAAAvtJREFUeF6d1ueOqzoAAGE3em/pfXs99b7/q93BGymQwG72fH8ihQw2YKyI78myt7c38X1Syhvc338vi6F936cU43w8P3e7JcrShVqvPw3X/eNuGEURgTEcGw+TsNUN89zzhFVjNMzz3HGc2/5UZ7ZL0yD4ORrO57tdkiR3nW9whxle/hsNN5uNMVrrTBw9IgiyLEvxR4xywBCOs1jYriyKIsuapklTzztdweLmPEwS1w33TFcpZS95t2sr+H7wWxwp1YgBWvPcdGwZs8ANmubHaUnwgIZLZpu7bl0vcw8pyAWg4ThikOsXMEgRBKLDgEckhsXSmMmkLGWwXk9n3W6PLW08Uip1gJRB8Gt99qa8vh5Qj4SV7QiZZ0+NCslwdwCdb4k+d1tVWruD3fajI5QD5abC3d1AN7EdeFGkzwK4PKxuppfd47FTauY4UWTL89AXl/b7yWRC50sZRXVNybt9fmJ52ZVl2yFN28Xl8pJxmS/dMw+GRfHRebOZQKJWbYn399Opi8I774yxXbunCVBGOZRS0+nplS042dnq1m2H03N33Y+SbwB+Yc52nwRlyTS97t3QyyUH1Gx22hMML9zZavro+vv9ElGk0rEwBh13k8s5D+NYhp33w0F3t6FrZaInQgoBlOVqpfFLWCHoPASir0Yn3KNmFOYFBboUP8TnHudgRPZaIXzMjVzgVnwh2hdwnAYeCiNx+yK+stpuuVtaSygYD9Nn8TWHtaO1Y7muSTF9F1fIKyTays0CL7/FVeIDamPNcP9HXOnh4SEvLNk00+lPcTVGnLd8fwFxvc2mbCmlpJSshKtNJo9QYK79Pw3I8IQgGN6XQjDXFH974QLcM/a4CyWPMoI66v938uFh4OKLw8GBUmGo/Ai3b3h6ElZkqaF/N1UVwwEfqnUDDxEStEfFpdfa0pYThmy+iOMEq1UO7bquGLcDv2CUGho5DHYQn1nCZZwQzNxgPi/LOcRX7Kg1EmisVhMQXpHq4zTF0Rbin1SV+EcP/eB/hzdMu048IHoAAAAASUVORK5CYII=">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script data-goatcounter="https://opedotcool.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <main id="app">
+        <h2 style="padding-top: 1rem; font-size: 2rem;" class="rs-text">99 sailing</h2>
+        <div class="info-group">
+            <p style="font-size:16px;" class="rs-text">{{ Math.abs(remaining).toLocaleString() }} xp since</p>
+            <div class="img">
+                <svg width="100" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                      <variable id="numerator" type="text">98</variable>
+                      <variable id="denominator" type="text">98</variable>
+                      <color id="bgColor">#454545</color>
+                      <color id="borderColor">#606060</color>
+                      <color id="textColor">#ccff00</color>
+                      <color id="textOutlineColor">#000000</color>
+                      <color id="slashColor">#000000</color>
+                      <variable id="iconURL" type="url">https://static.wikia.nocookie.net/2007scape/images/f/fc/sailing_icon.png</variable>
+                    </defs>
+                  
+                    <path d="M 5 0 L 95 0 L 100 5 L 100 45 L 95 50 L 5 50 L 0 45 L 0 5 Z"
+                          fill="#454545" stroke="#606060" stroke-width="2"/>
+                  
+                    <image href="https://oldschool.runescape.wiki/images/Sailing.png"
+                           x="8" y="6" height="34" width="34"
+                           preserveAspectRatio="xMidYMid meet"/>
+                  
+                    <g font-family="monospace" font-size="14" text-anchor="middle">
+                      <text class="level-text" x="60" y="20.5" fill="#FFff00" v-if="sailing">{{sailing.level}}</text>
+                  
+                      <line x1="90" y1="8" x2="50" y2="42" stroke="#000000" stroke-width="2"/>
+                
+                      <text class="level-text" x="82" y="42.5" fill="#FFff00">99</text>
+                    </g>
+                  
+                  </svg>
+            </div>
+        </div>
+        <!-- <p v-if="sailing" class="smol rs-text">99 Achieved: 2025-04-28 at 07:12am PT</p> -->
+        <p v-if="sailing" class="smol rs-text">Last updated: {{ timestamp }}</p>
+       <div class="progress">
+            <div style="padding-top: 15px">
+                <div>{{ percent }}% {{ current.toLocaleString() }} xp</div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const app = Vue.createApp({
+            el: '#app',
+            data() {
+                return {
+                    target: 13034431,
+                    sailing: null,
+                    current: 0,
+                }
+            },
+            computed: {
+                remaining() {
+                    return this.target - this.current;
+                },
+                percent() {
+                    return ((this.current / this.target) * 100).toFixed(2)
+                },
+                timestamp() {
+                    return new Date(this.sailing.timestamp).toLocaleString();
+                }
+            },
+            mounted() {
+                this.fetch();
+            },
+            methods: {
+                async fetch() {
+                    try {
+                        const res = await fetch('/sailing.json');
+                        const data = await res.json();
+                        this.current = data.xp;
+                        this.sailing = data;
+                        // document.documentElement.style.cssText = `--goal-progress-height: 50%`;
+                        // this.current = 13000000
+                        document.documentElement.style.cssText = `--goal-progress-height: ${this.percent}%`;
+                    } catch (err) {
+                        this.error = err
+                    }
+                }
+            }
+        })
+        app.mount('#app');
+    </script>
+    <style>
+        :root {
+            --goal-progress-height: 10%;
+            --dark: rgb(0, 108, 182);
+            --light: rgb(241, 241, 234);
+            --light-text: #050505;
+            --dark-text: white;
+        }
+        h1, h2, h3, h4 { margin: 0; padding: 0; }
+        html, body { margin: 0; padding: 0; max-height: 100vh; height: 100%; }
+        #app {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            font-size: 3rem;          
+            font-family: "Press Start 2P", monospace;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            background-color: var(--light);
+            color: var(--light-text, #050505);
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera a */
+            /* background-image: url(https://oldschool.runescape.wiki/images/Default_login_screen_mobile.png); */
+            background-image: url("https://oldschool.runescape.wiki/images/Login_background_%28Sailing%29.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .info-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        svg text {
+            font-family: "Press Start 2P", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .rs-text {
+            color:yellow;
+            text-shadow: 3px 3px 0px black;
+        }
+
+        .smol {
+            font-size: 10px;
+            text-align: center;
+        }
+        .goal {
+            position: fixed;
+            top: calc(100% - 2rem);
+            color: black;
+            right: 1rem;
+            font-size: 12px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            z-index: 999999;
+        }
+
+        .goal  input {
+            width: 50px;
+        }
+
+        .progress {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            height: var(--goal-progress-height);
+            transition: all 0.15s ease;
+            /* background-color: rgba(255, 255, 0, 0.402); */
+            color: yellow;
+            text-shadow: 2px 2px 0px black;
+            font-weight: bold;;
+            z-index: 1;
+            font-size: 10px;
+            background-image: url(https://oldschool.runescape.wiki/images/thumb/Sailing_cape_detail.png/260px-Sailing_cape_detail.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #app {
+                background-color: var(--dark, rgb(0, 108, 182));
+                color: var(--dark-text, white);
+            }
+
+            .count {
+                color: var(--light, rgb(241, 241, 234));
+            }
+
+            .but:hover {
+                color: var(--light, rgb(241, 241, 234));
+            }
+
+            .progress > div {
+                color: white;
+            }
+        }
+
+         /* prevent pull-to-refresh for Safari 16+ */
+         @media screen and (pointer: coarse) {
+            @supports (-webkit-backdrop-filter: blur(1px)) and (overscroll-behavior-y: none)  {
+                html {
+                    min-height: 100%;
+                    overscroll-behavior-y: none;
+                }
+            }
+        }
+        /* prevent pull-to-refresh for Safari 9~15 */
+        @media screen and (pointer: coarse) {
+            @supports (-webkit-backdrop-filter: blur(1px)) and (not (overscroll-behavior-y: none))  {
+                html {
+                    height: 100vh;
+                    overflow: hidden;
+                }
+                body {
+                    margin: 0px;
+                    max-height: 100vh; /* or `height: calc(100% - 16px);` if body has default margin */
+                    overflow: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+                /* in this case to disable pinch-zoom, set `touch-action: pan-x pan-y;` on `body` instead of `html` */
+            }
+        }
+    </style>
+</body>
+</html>
